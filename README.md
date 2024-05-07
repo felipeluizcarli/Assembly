@@ -14,9 +14,10 @@ Este programa em Assembly simula a atribuição de valores às posições de mem
 
 Assim, ao final da execução, cada posição de memória NAME_X conterá o valor hexadecimal correspondente à letra do nome "Flásh". No entanto, esse código não representa a alocação dinâmica de memória. A alocação dinâmica de memória geralmente envolve solicitar memória durante a execução do programa, o que não parece ser o caso aqui. Neste código, as posições de memória já estão definidas estaticamente.
 
-
+```Assembly
 ORG 000 /inicia o programa no endereço 000
 
+Carrega e guarda
 Load F
 Store NAME_S
 Load l
@@ -28,6 +29,8 @@ Store NAME_U
 Load h
 Store NAME_E
 
+Define o locação
+
 Halt / Termina a execução
 F, HEX 46
 l, HEX 6C
@@ -35,13 +38,15 @@ a, HEX 61
 s, HEX 73
 h, HEX 68
 
+Print
+
 NAME_S, HEX 0
 NAME_A, HEX 0
 NAME_M, HEX 0
 NAME_U, HEX 0
 NAME_E, HEX 0
 
-
+```
 ![327007111-09e62b8f-d443-44ef-ab33-4d4d0663ab3a](https://github.com/felipeluizcarli/Assembly/assets/127907269/d08dc8cc-968e-4d73-b876-19479f5e873d)
 
 
@@ -85,7 +90,7 @@ DOS em Assembly
 
 O DOS (Disk Operating System) aplicado em Assembly refere-se à prática de programar para o sistema operacional DOS usando linguagem Assembly. Nesse contexto, os programadores escrevem código Assembly para realizar tarefas específicas, como interagir com o sistema de arquivos, controlar dispositivos de hardware e criar interfaces de usuário simples. A programação Assembly no DOS oferece um controle direto sobre o hardware do computador, permitindo um desempenho otimizado e uma utilização eficiente dos recursos limitados disponíveis nos sistemas DOS.
 
-
+```Assembly
 .MODEL small ;Define o modelo de memória small
 .STACK 64 ;Aloca um espaço de 64 bytes para a pilha
 
@@ -107,7 +112,7 @@ main proc                          ;Define o inicio do procedimento principal
 main endp                          ;Marca o fim do ponto
 end main ;Indica o fim
 
-
+```
 Explicação do código e dos Registradores
 1 - AX:
  . Registrador geral de 16 bits, frequentemente usado para várias operações.
